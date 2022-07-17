@@ -7,7 +7,12 @@ module.exports = class extends Generator {
         "prettier",
         "eslint",
         "eslint-config-prettier",
+        "eslint-plugin-import",
+        "eslint-plugin-node",
         "eslint-plugin-prettier",
+        "eslint-plugin-react",
+        "@typescript-eslint/parser",
+        "eslint-plugin-react-hooks",
         "@typescript-eslint/parser",
         "@typescript-eslint/eslint-plugin"
       ],
@@ -16,6 +21,6 @@ module.exports = class extends Generator {
   }
 
   eslint() {
-    this.fs.copy(this.templatePath(".eslintrc"), this.destinationPath(".eslintrc.json"));
+    this.fs.copy(this.templatePath(".eslintrc.js"), this.destinationPath(".eslintrc.js"));
   }
 };

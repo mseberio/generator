@@ -6,20 +6,24 @@ module.exports = class extends Generator {
       {
         type: "list",
         name: "eslint",
-        message: "What ESLint config do you want?",
-        when: answers => answers.features.includes("eslint"),
+        message: "Which ESLint config do you want?",
         choices: [
           {
             name: "next"
+          },
+          {
+            name: "gatsby"
           }
         ]
       }
     ]);
 
-    if (answers.eslint) {
-      if (answers.eslint.includes("next")) {
-        this.composeWith(require.resolve("./next"));
-      }
+    if (answers.eslint.includes("next")) {
+      this.composeWith(require.resolve("./next"));
+    }
+
+    if (answers.eslint.includes("gatsby")) {
+      this.composeWith(require.resolve("./gatsby"));
     }
   }
 };
