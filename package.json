@@ -2,6 +2,7 @@
   "name": "generator-mseberio",
   "version": "0.1.0",
   "description": "",
+  "author": "mseberio",
   "files": [
     "generators"
   ],
