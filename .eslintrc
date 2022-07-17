@@ -1,0 +1,21 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "xo-space/esnext",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false,
+        "printWidth": 90
+      }
+    ]
+  },
+  "plugins": [
+    "prettier"
+  ]
+}

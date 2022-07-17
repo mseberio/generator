@@ -1,0 +1,21 @@
+{
+  "name": "generator-mseberio",
+  "version": "0.1.0",
+  "description": "",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-xo-space": "^0.20.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.19.1"
+  }
+}
