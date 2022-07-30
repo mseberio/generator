@@ -67,7 +67,7 @@ module.exports = {
       },
     ],
     "import/no-anonymous-default-export": ["error", {
-      allowAnonymousFunction: true
+      allowObject: true
     }],
     "react/self-closing-comp": "warn",
     "react/jsx-sort-props": [
