@@ -5,7 +5,6 @@ module.exports = class extends Generator {
     this.npmInstall(
       [
         "prettier",
-        "eslint",
         "eslint-config-prettier",
         "eslint-plugin-prettier",
         "@typescript-eslint/parser",
