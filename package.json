@@ -1,6 +1,6 @@
 {
   "name": "generator-mseberio",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "ESlint configuration for Next and Gatsby",
   "author": "mseberio",
   "files": [
