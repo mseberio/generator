@@ -1,7 +1,7 @@
 {
   "name": "generator-mseberio",
-  "version": "0.1.19",
-  "description": "ESlint configuration for Next and Gatsby",
+  "version": "0.1.20",
+  "description": "ESlint configuration for React, Next.js and Gatsby",
   "author": "mseberio",
   "files": [
     "generators"

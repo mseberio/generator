@@ -9,6 +9,9 @@ module.exports = class extends Generator {
         message: "Which ESLint config do you want?",
         choices: [
           {
+            name: "react"
+          },
+          {
             name: "next"
           },
           {
@@ -22,9 +25,6 @@ module.exports = class extends Generator {
         message: "Select the Stylelint configuration you want",
         choices: [
           {
-            name: "css"
-          },
-          {
             name: "scss"
           },
           {
@@ -35,6 +35,10 @@ module.exports = class extends Generator {
     ]);
 
     if (answers.eslint) {
+      if (answers.eslint.includes("react")) {
+        this.composeWith(require.resolve("./react"));
+      }
+
       if (answers.eslint.includes("next")) {
         this.composeWith(require.resolve("./next"));
       }
