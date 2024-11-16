@@ -2,17 +2,14 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.npmInstall(
-      [
-        "stylelint",
-        "stylelint-config-standard",
-        "stylelint-config-tailwindcss",
-        "stylelint-order"
-      ],
-      {
-        "save-dev": true
-      }
-    );
+    this.spawnCommandSync("pnpm", [
+      "add",
+      "-D",
+      "stylelint",
+      "stylelint-config-standard",
+      "stylelint-config-tailwindcss",
+      "stylelint-order"
+    ]);
   }
 
   eslint() {

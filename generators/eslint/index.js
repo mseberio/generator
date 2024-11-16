@@ -10,6 +10,9 @@ module.exports = class extends Generator {
         choices: [
           {
             name: "next"
+          },
+          {
+            name: "none"
           }
         ]
       },
@@ -32,14 +35,8 @@ module.exports = class extends Generator {
     ]);
 
     if (answers.eslint) {
-      if (answers.eslint.includes("react")) {
-        this.composeWith(require.resolve("./react"));
-      }
       if (answers.eslint.includes("next")) {
         this.composeWith(require.resolve("./next"));
-      }
-      if (answers.eslint.includes("gatsby")) {
-        this.composeWith(require.resolve("./gatsby"));
       }
     }
 

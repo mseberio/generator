@@ -2,15 +2,14 @@ const Generator = require("yeoman-generator");
 
 module.exports = class extends Generator {
   installDependencies() {
-    this.npmInstall(
-      [
-        "prettier",
-        "prettier-plugin-tailwindcss",
-        "eslint-plugin-prettier",
-        "eslint-config-prettier"
-      ],
-      { "save-dev": true }
-    );
+    this.spawnCommandSync("pnpm", [
+      "add",
+      "-D",
+      "prettier",
+      "prettier-plugin-tailwindcss",
+      "eslint-plugin-prettier",
+      "eslint-config-prettier"
+    ]);
   }
 
   eslint() {
