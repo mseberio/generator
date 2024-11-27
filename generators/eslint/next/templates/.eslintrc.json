@@ -1,5 +1,5 @@
 {
-  "extends": ["plugin:prettier/recommended","next/core-web-vitals", "next/typescript"],
+  "extends": ["plugin:prettier/recommended", "next/core-web-vitals", "next/typescript"],
   "plugins": ["prettier"],
   "rules": {
     "no-console": "warn",
@@ -31,16 +31,22 @@
     "import/order": [
       "warn",
       {
-        "groups": ["type", "builtin", "object", "external", "internal", ["parent", "sibling"]],
+        "groups": ["type", "builtin", "object", "external", "internal", "parent", "sibling"],
         "pathGroups": [
           {
             "pattern": "react",
             "group": "external",
             "position": "before"
+          },
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "before"
           }
         ],
-        "pathGroupsExcludedImportTypes": ["react"],
+        "pathGroupsExcludedImportTypes": ["react", "internal"],
         "newlines-between": "always",
+        "named": true,
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
